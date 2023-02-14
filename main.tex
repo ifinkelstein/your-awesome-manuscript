@@ -1,19 +1,19 @@
 \documentclass[letterpaper,8pt]{extarticle}  % "extarticle" gives more global font size options. use 8pt with Montserrat and 10pt with EBGaramond
 \usepackage{import}
 \usepackage{local}
-\usepackage[left=.65in,top=.65in,bottom=.65in,right=.65in]{geometry}
+\usepackage[left=1.5in,top=1in,bottom=1in,right=1.5in]{geometry}
 \usepackage{lipsum} % to generate text
 
 
 \title{\lipsum[1][1]}
 
 \author{%
-\textbf{Name \orcidlink{0000-0001-2345-6798},\textcolor{Accent}{\textsuperscript{1}} %
-Name \orcidlink{0000-0001-2345-6798},\textcolor{Accent}{\textsuperscript{1}} %
-Name\orcidlink{0000-0001-2345-6789}\textcolor{Accent}{\textsuperscript{1,2,*}} }\\
-\begin{small}\textcolor{Accent}{\textsuperscript{1}}Your affiliation(s) \\ 
-\textcolor{Accent}{\textsuperscript{2}}Lead Contact \\
-\textcolor{Accent}{\textsuperscript{*}}Correspondence: \textcolor{Accent}{you@gmail.com} \\ \end{small}
+\textbf{Name \orcidlink{0000-0001-2345-6798},{\textsuperscript{1}} %
+Name \orcidlink{0000-0001-2345-6798},{\textsuperscript{1}} %
+Name\orcidlink{0000-0001-2345-6789}{\textsuperscript{1,2,*}} }\\
+\begin{small}{\textsuperscript{1}}Your affiliation(s) \\ 
+{\textsuperscript{2}}Lead Contact \\
+{\textsuperscript{*}}Correspondence: \textcolor{blue}{you@gmail.com} \\ \end{small}
 }
 
 \date{}
@@ -31,13 +31,13 @@ Name\orcidlink{0000-0001-2345-6789}\textcolor{Accent}{\textsuperscript{1,2,*}} }
 \begin{linenumbers}
 
 \noindent
-\textbf{\lipsum[1]}}
+\textbf{\lipsum[1]}
 
 %\begin{multicols*}{2} % if you want two columns
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\lipsum[2] (\Cref{fig:1A,fig:1B})
+\lipsum[2] (\Cref{fig:1Ak,fig:1B})
 
 \lipsum[3]\citep{Schindelin2012}
 
@@ -102,3 +102,7 @@ Conceptualization: Methodology: Investigation: Visualization: Writing:  Editing:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{figures.tex}
 \end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

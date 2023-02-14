@@ -4,25 +4,22 @@
 \usepackage[document]{ragged2e} % right justify (comment to center justify text
 \usepackage{multicol} % two-column formatting 
 \usepackage{comment}  % for block comments
-\usepackage[usenames,dvipsnames]{color} % load color names
 \usepackage{changepage} % to tweak the margins locally
 \usepackage{setspace} % use this for double-spacing
 % \pagestyle{empty} % remove page numbers
 \usepackage[inline,shortlabels]{enumitem} % in-line enumerated items
-\usepackage[modulo]{lineno} % line numbering 
-\renewcommand\linenumberfont{\normalfont\small}
+\usepackage[modulo]{lineno} % line numbering [modulo] numbers every fifth
+% \renewcommand\linenumberfont{\normalfont\small}
 
 \usepackage[table,xcdraw]{xcolor} % use the table option if you want color in tables
-%\definecolor{Accent}{HTML}{0092BD} 
-%\definecolor{Highlight}{HTML}{580F8B} 
 
 %%%%%%%%%%%%% figures and tables and captions %%%%%%%%%%%%%%%%
 \usepackage{graphicx} 
 \usepackage[margin=10pt,font=small,labelfont=bf,labelsep=colon,justification=raggedright,singlelinecheck=false,format=plain]{caption}
-\DeclareCaptionFont{Highlight}{\color{Highlight}}
-\captionsetup{labelfont={Highlight,bf}}
+% \DeclareCaptionFont{Highlight}{\color{Highlight}}
+% \captionsetup{labelfont={Highlight,bf}}
 \usepackage{grffile} % takes the names of figures out
-\usepackage{pdflscape} % will rotate to landscape where appropriate
+% \usepackage{pdflscape} % will rotate to landscape where appropriate
 
 \usepackage[labelfont=normalfont]{subcaption} % useful with cleverref 
 \captionsetup[subfigure]{subrefformat=simple,labelformat=simple}
@@ -38,21 +35,11 @@
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}  
 \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 
-%%%%%%%%%%%%% fonts %%%%%%%%%%%%%
-% if you want Garamond or TeX Gyre Heros fonts, use XeLaTeX to compile
-
-%\usepackage{mathspec} % note, this loads fontspec
-%\usepackage{fontspec}
-%\setmainfont[Numbers=Lining]{EB Garamond} % (serif) numbers = lining otherwise the numbers in EB Garamond are weird
-%\setmathfont(Digits,Latin,Greek)[Numbers={Lining}]{EB Garamond}
-%\usepackage[cmintegrals,cmbraces]{newtxmath} % if you want Garamond-like math symbols
-%\setmainfont[Numbers=Lining]{TeX Gyre Heros} % (sans serif)
-
 % if you want Montserrat
-\usepackage[defaultfam,  light,  tabular,  lining]{montserrat}
-\makeatletter
-\def\bfseries@sf{bold} % if you want a different bold w/montserrat change this
-\makeatother
+% \usepackage[defaultfam,  light,  tabular,  lining]{montserrat}
+% \makeatletter
+% \def\bfseries@sf{bold} % if you want a different bold w/montserrat change this
+% \makeatother
 
 %%%%%%%%%%%%% spacing %%%%%%%%%%%%%
 \setlength{\parskip}{.75ex plus 0.25ex minus 0.25ex} % slight space b/w paragraphs
@@ -64,24 +51,24 @@
 \usepackage{textcomp} % some control quote sequences and other symbols
 \usepackage{mathtools} % symbols
 \usepackage{mathrsfs} %allows the /mathscr command for in-line math
-\usepackage{gensymb} % nice \degree 
+\usepackage{gensymb} % nice \degree and ℃
 \usepackage[autostyle]{csquotes} % nice quotes using \enquote{}
 \usepackage[english]{babel} % multilingual hyphenation support
 
 %%%%%%%%%%%%% section / subsection titles %%%%%%%%%%%%%%%%
 \usepackage{titlesec} % change the "sffamily" to "rmfamily" if you switch to serif fonts
-\titleformat{\section}
-  {\sffamily\normalsize\bfseries
-  {\thesection}{1em}
-  {\MakeUppercase}
+% \titleformat{\section}
+%   {\sffamily\normalsize
+%   {\thesection}{1em}
+%   {\MakeUppercase}
   
-\titleformat{\subsection}
-  {\sffamily\normalsize\bfseries
-  {\thesection}{1em}{}
+% \titleformat{\subsection}
+%   {\sffamily\normalsize\bfseries
+%   {\thesection}{1em}{}
   
-\titleformat{\subsubsection}
-  {\sffamily\small\bfseries
-  {\thesection}{1em}{}
+% \titleformat{\subsubsection}
+%   {\sffamily\small\bfseries
+%   {\thesection}{1em}{}
 
 \titlespacing*\section{0pt}{*1}{*.5}
 \titlespacing*\subsection{0pt}{*1}{*-.5}
