@@ -25,6 +25,18 @@
 \captionsetup[subfigure]{subrefformat=simple,labelformat=simple}
 \renewcommand{\thesubfigure}{\Alph{subfigure}} % use this command to make references to figure sub-panels uppercase change to \alph if you label your figures in lower case
 
+%% Annotation packages
+\usepackage{todonotes}
+\usepackage{comment}
+
+%% Useful: a few TODO macros to display colored boxes with remarks and comments
+\newcommand{\todoIF}[1]{\todo[inline,caption={},color=cyan]{\sf\small IF: #1}}
+\newcommand{\todoall}[1]{\todo[inline,caption={},color=yellow]{\sf\small #1}}
+
+%% This will print a "DRAFT" watermark on all pages.
+%% Uncomment if needed
+% \usepackage{draftwatermark}
+% \SetWatermarkText{DRAFT}
 \makeatletter
 \@fpsep\textheight % puts all your figures on separate pages
 \makeatother
