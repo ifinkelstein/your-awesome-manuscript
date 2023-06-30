@@ -1,0 +1,142 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Cover letter template adapted for UT-Austin
+% LaTeX Template
+% Version 2.0 (September 17, 2021)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Authors: Fanchao Chen
+% (chenfc@fudan.edu.cn)
+% Modified: Ilya Finkelstein
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+\usepackage{newtx} % Use equivalent of Times New Roman
+\usepackage{soul} % for highlighting text
+\usepackage[
+	letterpaper,    % Paper size
+	top=1in,    % Top margin
+	bottom=1in, % Bottom margin
+	left=1in,   % Left margin
+	right=1in,  % Right margin
+    headsep=1.6cm % distance between header and body
+	% showframe  % Uncomment to show frames around the margins for debugging purposes
+]{geometry}
+
+\setlength{\parindent}{0pt}     % Paragraph indentation 
+\setlength{\parskip}{1em}       % Vertical space between paragraphs
+
+\usepackage{graphicx}       % Required for including images
+\usepackage{fancyhdr}       % Required for customizing headers and footers
+\usepackage[utf8]{inputenc} % translate utf8 chars into LaTeX internal encoding
+\pagenumbering{arabic}
+
+\usepackage{hyperref} % make URL and email clickable
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdfpagemode=FullScreen,
+  }
+  \urlstyle{same} % use same font for URL and main text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comments
+\usepackage{todonotes}
+\newcounter{mycomment}
+ % indicate who is making a todo comment using this command
+\newcommand{\mycomment}[2][]{
+    \refstepcounter{mycomment}
+    {\todo[inline, color={red!100!green!33},size=\small]{\textbf{[\uppercase{#1}\themycomment]:}#2}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\fancypagestyle{firstpage}{%
+	\fancyhf{} % Clear default headers/footers
+	\renewcommand{\headrulewidth}{0pt} % No header rule
+	\renewcommand{\footrulewidth}{0pt} % Footer rule thickness
+    \lhead{\includegraphics[width=1\textwidth]{letterhead.pdf}} % Logo
+    \rfoot{\thepage}
+}
+
+\fancypagestyle{subsequentpages}{%
+	\fancyhf{} % Clear default headers/footers
+	\renewcommand{\headrulewidth}{0pt} % Header rule thickness
+	\renewcommand{\footrulewidth}{0pt} % Footer rule thickness
+    \rfoot{\thepage}
+ }
+
+\AtBeginDocument{\thispagestyle{firstpage}} % Use the first page headers/footers style on the first page
+\pagestyle{subsequentpages} % Use the subsequent pages headers/footers style on subsequent pages
+
+%----------------------------------------------------------------------------------------
+\begin{document}
+\hfill
+\begin{tabular}{l @{}}
+\\
+Ilya Finkelstein, Ph.D                 \\
+Associate Professor                  \\
+Molecular Biosciences                \\
+\href{mailto:ilya@finkelsteinlab.org}{ilya@finkelsteinlab.org}              \\
+  \url{https://finkelsteinlab.org} \bigskip \\
+  
+	\today  % Date
+\end{tabular}
+
+\bigskip % Vertical whitespace
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING
+%----------------------------------------------------------------------------------------
+
+% \begin{tabular}{@{} l}
+% 	Mr.\ XXX \\
+% 	Recruitment Officer \\
+% 	The Corporation \\
+% 	123 Pleasant Lane \\
+% 	City, State 12345
+% \end{tabular}
+
+% \bigskip % Vertical whitespace
+
+Dear Editors:
+
+\bigskip % Vertical whitespace
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+I am pleased to submit a manuscript titled "\textbf{Title-zzz}" for consideration in \emph{zzz-journal}. zzz-a few sentences summarizing the key findings. 
+
+I anticipate that this manuscript will be of broad interest to the zzz, zzz, and zzz communities.
+
+The enclosed manuscript contains zzz figures, and zzz supplemental figures.
+
+Suitable reviewers for the manuscript include (in alphabetical order): 
+
+\begin{itemize}
+\item Foo bar
+\item Bar foo
+\end{itemize}
+
+We’d like to exclude zzz-tough reviewer due to a conflict of interest.
+
+
+\bigskip % Vertical whitespace
+
+Sincerely yours,
+
+\includegraphics[height = 1.5cm]{signature.pdf}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-master: t
+%%% End:

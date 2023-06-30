@@ -1,0 +1,40 @@
+* What is Your Awesome Manuscript?
+
+Your Awesome Manuscript is an easy-to-customize LaTeX template for a journal article.  
+
+* Preview
+** Main Document
+** Cover Letter
+* 
+* Quick Start
+*Note: The Overleaf template doesn't guarantee an up-to-date version of these templates.*
+    Edit Manuscript on OverLeaf.com
+    Edit Cover Letter on OverLeaf.com
+* How to Use
+** Requirements
+Compiling LaTeX documents requires a full LaTeX distribution. I recommend the TeX Live distribution for Windows, Mac, or *nix.
+
+If you don't want to install the dependencies on your system, this can also be obtained via Docker.
+
+Usage:
+
+I recommend the excellent [[https://github.com/islandoftex/][arara]] package for sequentially running  xelatex, biber, and then xelatex again. Please see the arara documentation for installing it on your operating system.
+
+=arara main.tex=
+
+This should result in the creation of =main.pdf=
+
+* Credit  
+TODO: LaTeX, font packs, etc.
+
+* See Also
+- [[https://github.com/posquit0/Awesome-CV][Awesome-CV]]: a wonderful LaTeX template for CVs and cover letters. I drew my inspiration for sharing this template from that project.
+- Overleaf: [[https://www.overleaf.com/latex/templates/preprint-template/zhdxcbrgbfyb][Preprint template]] by David Schoppik
+- Overleaf: [[https://www.overleaf.com/articles/nanoj-a-high-performance-open-source-super-resolution-microscopy-toolbox/yrfqndrnxykj][Two-column pre-print template]] by Ricardo Henriques
+
+* Contact
+Please feel free to use this template for your projects. 
+
+If you have any questions, feel free to open an issue. 
+
+Good luck with reviewer #3!

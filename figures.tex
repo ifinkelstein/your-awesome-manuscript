@@ -1,31 +1,22 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Figures
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
 
-\newpage
+\section*{Figures}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{figures/fig1.pdf}
+    \caption{\textbf{Declarative title} (A) Some description. (B) And this is about panel B.}
+    \label{fig:fig1}
+  \end{figure}
 
-%%%%%%%%%%%%% Figure 1
-\begin{figure}
-\centering
-\begin{subcaptiongroup}
-\phantomcaption\label{fig:1A} % add one of these for each subpanel
-\phantomcaption\label{fig:1B} % add one of these for each subpanel
-\end{subcaptiongroup}
-\includegraphics[width=1\textwidth]{figures/sampfig.png}
-\caption{{\textbf{Schematic illustrations of apparatus design.}}\\
-(A)
-Some text.\\
-(B)
-More text.\\
-(C) 
-Last text.
-}
-\label{fig:F1}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{figures/fig2.pdf}
+    \caption{\textbf{Declarative title} (A) Some description. (B) And this is about panel B.}
+    \label{fig:fig2}
+  \end{figure}
 
-\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SUPPLEMENTAL Figures
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\beginsupplement % <- renumbers everything and starts figure naming with "S" per local.sty
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% reftex-default-bibliography: ("bibliography.bib")
+%%% End:
