@@ -1,0 +1,94 @@
+\documentclass[11pt]{article}
+
+\usepackage[letterpaper, margin=1in]{geometry}
+
+\usepackage{outlines}
+\usepackage{enumitem}
+
+%% Fonts and math symbols
+% serif fonts are more legible
+\usepackage{libertine} % resembles an elegant Times New Roman
+% \usepackage[sfdefault]{roboto} %sans-serif font option 
+\usepackage{amsmath} % math symbols
+\usepackage{nicematrix} %improve matrix and table typesetting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Bibliography
+\usepackage[style=nature, backend=biber, sorting=none, sortcites=true]{biblatex}
+\renewbibmacro{in:}{} % remove the "In: " text for all entry types
+\addbibresource{bibliography.bib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Figures
+% Make figures show up at the top of the page, as opposed to vertically centered
+% Note: this is a file-global setting.
+% https://texfaq.org/FAQ-vertposfp
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+\usepackage[labelfont=bf]{caption} %bold figure captions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Tables
+\usepackage{longtable} %format tables across multiple pages
+\usepackage{booktabs} %nice looking tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Line spacing and line numbering
+\usepackage{setspace}
+\onehalfspacing
+% The lineno packages adds line numbers. 
+% Start line numbering with \begin{linenumbers}, end it with \end{linenumbers}. 
+% Or switch it on for the whole article with 
+% [modulo] numbers every five lines; see doc for arbitrary numbering
+% \usepackage[modulo]{lineno}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Comments
+% Create comments and to do lists, either inline or in the margin 
+\usepackage{todonotes}
+\newcounter{comment}
+% indicate a todo comment using this custom command. User can supply his initials
+\newcommand{\mycomment}[2][]{
+    \refstepcounter{comment}
+    {\todo[inline, color={red!100!green!33},size=\small]{\textbf{[\uppercase{#1}\themycomment]:}#2}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% SI units
+\usepackage{siunitx}
+\DeclareSIUnit\molar{\textsc{M}}
+\newcommand{\uL}[1]{\SI{#1}{\micro\liter}} %\ul is taken by underline in 
+\newcommand{\mL}[1]{\SI{#1}{\milli\liter}}
+\newcommand{\angs}[1]{\SI{#1}{\angstrom}}
+\newcommand{\angstrom}{\textup{\AA}}
+\newcommand{\um}[1]{\SI{#1}{\micro\meter}}
+\newcommand{\degC}[1]{\SI{#1}{\celsius}}
+\newcommand{\nanog}[1]{\si{#1}{\nano\gram}} %\ng is taken by an internal command
+\newcommand{\ug}[1]{\si{#1}{\micro\gram}} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% write chemical formulae quickly.
+% examples (see documentation for much more sophisticated examples):
+% \ch{2 H2O}
+% \ch{2H2O}
+\usepackage{chemformula}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Manuscript title, author affiliations, and keywords
+\usepackage{authblk} %author block for adding affiliations easily
+\setcounter{Maxaffil}{0} % allow any number of affiliations per author
+\renewcommand\Affilfont{\itshape\small} % reduce affiliation font size
+% Keywords command
+\newcommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Keywords:}} #1
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: main
+%%% End:
