@@ -1,95 +1,16 @@
-% Settings for arara
+%% Settings for arara
 % https://github.com/islandoftex/arara
 %!TEX encoding = UTF-8 Unicode
 % arara: xelatex
 % arara: biber
 % arara: xelatex
 
-\documentclass[11pt]{article}
-\usepackage[letterpaper, margin=1in]{geometry}
 
-\usepackage{outlines}
-\usepackage{enumitem}
+%% Header file includes all the document-specific settings
+% Modify this file if you want to change fonts, line numbers, etc.
+\input{header.tex}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Bibliography
-\usepackage[style=numeric-comp, backend=biber, sorting=none, sortcites=true]{biblatex}
-\addbibresource{bibliography.bib}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Font
-% serif fonts are more legible
-\usepackage{libertine} % resembles an elegant Times New Roman
-% \usepackage[sfdefault]{roboto} %sans-serif font option 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Comments
-\usepackage{todonotes}
-\newcounter{mycomment}
- % indicate who is making a todo comment using this command
-\newcommand{\mycomment}[2][]{
-    \refstepcounter{mycomment}
-    {\todo[inline, color={red!100!green!33},size=\small]{\textbf{[\uppercase{#1}\themycomment]:}#2}}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SI units
-\usepackage{siunitx}
-\DeclareSIUnit\molar{\textsc{M}}
-\newcommand{\ul}[1]{\SI{#1}{\micro\liter}}
-\newcommand{\ml}[1]{\SI{#1}{\milli\liter}}
-
-\newcommand{\angs}[1]{\SI{#1}{\angstrom}}
-\newcommand{\angstrom}{\textup{\AA}}
-\newcommand{\um}[1]{\SI{#1}{\micro\meter}}
-
-\newcommand{\degC}[1]{\SI{#1}{\celsius}}
-
-\newcommand{\nanog}[1]{\si{#1}{\nano\gram}} %\ng is taken by an internal command
-\newcommand{\ug}[1]{\si{#1}{\micro\gram}} %\ng is taken by an internal command
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Line spacing and line numbering
-\usepackage{setspace}
-\onehalfspacing
-
-%% The lineno packages adds line numbers. Start line numbering with
-%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
-%% for the whole article with 
-%% [modulo] numbers every five lines; see doc for arbitrary numbering
-\usepackage[modulo]{lineno}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage{booktabs}
-\usepackage{amsmath}
-\usepackage{nicematrix}
-
-\usepackage{longtable} %format tables across multiple pages
-\usepackage{booktabs} %nice looking tables
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% for chemical formulae
-\usepackage{chemformula}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% Keywords command
-\newcommand{\keywords}[1]
-{
-  \small	
-  \textbf{\textit{Keywords: }} #1
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Manuscript title and author affiliations
-\usepackage{authblk} %author block for adding affiliations easily
-\setcounter{Maxaffil}{0} % allow any number of affiliations per author
-\renewcommand\Affilfont{\itshape\small} % reduce affiliation font size
-
+%% Authors and affiliations
 \title{Manuscript Title}
 \author[1, *]{Jane Doe}
 \author[1]{John Doe}
@@ -99,25 +20,22 @@
 \affil[*]{Correspndence: janedoe@utexas.edu; ilya@finkelsteinlab.org}
 
 \date{}  % remove today's date from the title
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{document}
 
+\begin{document}
 % comment this out to remove list of todos
 \listoftodos 
 
 \maketitle
 % \linenumbers % uncomment to add line numbers
+
 \begin{abstract} 
 \noindent
 Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
 \end{abstract}
 
-  %% keywords here
-\begin{keywords}
-keyword1, keyword2, keyword3, etc.
-\end{keywords}
+% keywords here
+\keywords{keyword1, keyword2, keyword3, etc.}
 
 \newpage           
 \input{introduction.tex}
@@ -133,11 +51,11 @@ keyword1, keyword2, keyword3, etc.
 \input{figures.tex}
 \end{document}
 
-% Settings for Emacs
-%%% Local Variables:
-%%% TeX-engine: xetex
-%%% mode: latex
-%%% TeX-master: t
-%%% End:
+%% Settings for Emacs
+% Local Variables:
+% TeX-engine: xetex
+% mode: latex
+% TeX-master: t
+% End:
 
 
